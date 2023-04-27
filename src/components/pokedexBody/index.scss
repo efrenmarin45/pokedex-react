@@ -1,0 +1,196 @@
+.hide {
+	display: none;
+}
+
+.container {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	height: 90vh;
+    z-index: 1;
+    opacity: 1;
+}
+
+.blockContainer {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0;
+	transition: transform 1s;
+}
+
+.blocks-top,
+.blocks-bottom {
+	width: 955px;
+	height: 116px;
+	background-color: #dc3939;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 15px;
+	transition: transform 1s;
+}
+
+.top-user-actions{
+    display: flex;
+    justify-content: space-between;
+}
+
+.outer-ring-top {
+	position: absolute;
+	top: 60.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 95px;
+	width: 200px;
+	border-radius: 150px 150px 0 0;
+	background-color: white;
+}
+
+.inner-ring-top {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 85px;
+	width: 180px;
+	border-radius: 150px 150px 0 0;
+	background-color: black;
+}
+
+.inner-center-ring-top {
+	position: absolute;
+	top: 73%;
+	left: 50%;
+	z-index: 0;
+	transform: translate(-50%, -50%);
+	height: 50px;
+	width: 100px;
+	border-radius: 150px 150px 0 0;
+	background-color: aqua;
+}
+
+.outer-ring-bottom {
+	position: absolute;
+	top: 39.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 92px;
+	width: 200px;
+	border-radius: 0 0 150px 150px;
+	background-color: white;
+}
+
+.inner-ring-bottom {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 83px;
+	width: 180px;
+	border-radius: 0 0 150px 150px;
+	background-color: black;
+}
+
+.inner-center-ring-bottom {
+	position: absolute;
+	top: 27%;
+	left: 50%;
+	z-index: 0;
+	transform: translate(-50%, -50%);
+	height: 50px;
+	width: 100px;
+	border-radius: 0 0 150px 150px;
+	background-color: aqua;
+}
+
+/* Pokedex Body */
+.glassBody {
+	align-self: center;
+	width: 935px;
+	height: 10px;
+	margin: 0px auto 0 auto;
+	border-radius: 5px;
+	transition: height 1s;
+    background: #00ffff;
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+/* Pulse Button */
+.open-pulse {
+    position: relative;
+	width: 85px;
+	height: 85px;
+	margin: -43px auto;
+	z-index: 1;
+	border-radius: 50%;
+	background-color: aqua;
+	cursor: pointer;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(10);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.25);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 100px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.25);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+/* Blinking Lights */
+.indicator-lights{
+    display: flex;
+    flex-direction: row;
+}
+
+.light-trio{
+    margin: 20px 25px 0 0;
+    height: 1.5em;
+    width: 1.5em;
+    border: 2px outset white;
+    border-radius: 50%;
+}
+
+.light-trio:nth-child(1){
+    background-color: #4e1515;
+}
+
+.light-trio:nth-child(2){
+    background-color: #929219;
+}
+
+.light-trio:nth-child(3){
+    background-color: #00ff0099;
+}
+
+.closeBtn {
+	margin: 5px 0 0 10px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	padding: 0;
+}
+
+.hideInSight{
+	cursor: default;
+	margin: 5px 0 0 10px;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
