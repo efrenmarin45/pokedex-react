@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import SearchBar from "./searchBar";
+import FetchPokeData from "../api/api";
 
 const GlassBody = (props: {
 	checkOpen: { isActive: boolean; setIsActive: (value: boolean) => void };
@@ -13,16 +14,16 @@ const GlassBody = (props: {
 
 	useEffect(() => {
 		let timer: number | undefined;
-	
+
 		if (isActive) {
-		  timer = setTimeout(() => {
-			setShowSearchBar(true);
-		  }, 1000);
+			timer = setTimeout(() => {
+				setShowSearchBar(true);
+			}, 900);
 		}
-	
+
 		return () => clearTimeout(timer);
-	  }, [isActive]);
-	
+	}, [isActive]);
+
 	return (
 		<>
 			<div

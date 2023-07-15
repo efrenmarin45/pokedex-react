@@ -110,6 +110,7 @@
 	display: flex;
 	align-self: center;
 	width: 935px;
+	flex-direction: column-reverse;
 	height: 10px;
 	margin: 0px auto 0 auto;
 	border-radius: 5px;
@@ -122,22 +123,51 @@
 	border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
+.centralDataDisplay {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+.imgContainer {
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	margin: auto;
+	width: 33vw;
+	height: 33vh;
+	background-color: yellow;
+}
+
 /* Search Bar */
 .searchBar {
 	display: flex;
 	flex-direction: row;
 	align-self: flex-end;
-	margin: 0 auto .5rem auto;
+	margin: 0 auto 0.5rem auto;
 	width: 230px;
 	height: 50px;
 	align-items: center;
 	justify-content: center;
-	background: linear-gradient(90deg, #00b09b, #45ea21, #21a0ea);
-    background-size: 600% 600%;
+	background: linear-gradient(
+		210deg,
+		#ea2121,
+		#ea9d21,
+		#eae721,
+		#22b901,
+		#21eaae,
+		#217eea,
+		#84d3f7,
+		#b27aff,
+		#ffb67a,
+		#e88e44
+	);
+	background-size: 600% 600%;
 
-    -webkit-animation: SearchBar 5s ease infinite;
-    -moz-animation: SearchBar 5s ease infinite;
-    animation: SearchBar 5s ease infinite;
+	-webkit-animation: SearchBar 15s ease infinite;
+	-moz-animation: SearchBar 15s ease infinite;
+	animation: SearchBar 15s ease infinite;
 
 	border-radius: 30px;
 	overflow: hidden;
@@ -145,19 +175,37 @@
 }
 
 @-webkit-keyframes SearchBar {
-    0%{background-position:0% 53%}
-    50%{background-position:100% 48%}
-    100%{background-position:0% 53%}
+	0% {
+		background-position: 92% 0%;
+	}
+	50% {
+		background-position: 9% 100%;
+	}
+	100% {
+		background-position: 92% 0%;
+	}
 }
 @-moz-keyframes SearchBar {
-    0%{background-position:0% 53%}
-    50%{background-position:100% 48%}
-    100%{background-position:0% 53%}
+	0% {
+		background-position: 92% 0%;
+	}
+	50% {
+		background-position: 9% 100%;
+	}
+	100% {
+		background-position: 92% 0%;
+	}
 }
 @keyframes SearchBar {
-    0%{background-position:0% 53%}
-    50%{background-position:100% 48%}
-    100%{background-position:0% 53%}
+	0% {
+		background-position: 92% 0%;
+	}
+	50% {
+		background-position: 9% 100%;
+	}
+	100% {
+		background-position: 92% 0%;
+	}
 }
 
 .searchBar > input {
