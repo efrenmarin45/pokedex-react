@@ -3,6 +3,7 @@ import { MainClient } from "pokenode-ts";
 import pokeGif from "../../assets/ash_pikachu.gif";
 import PokeImage from "../pokedexBody/pokeImage";
 import PokeText from "../pokedexBody/pokeText";
+import PokeStats from "../pokedexBody/pokeStats";
 
 interface FetchPokeProps {
 	userSelection: string;
@@ -57,8 +58,14 @@ const FetchPokeData = ({ userSelection }: FetchPokeProps) => {
 				</div>
 			) : (
 				<>
-					<PokeImage pokeData={pokemonData} />
-					<PokeText pokeData={speciesData} />
+					<div className='topComponents'>
+						<PokeStats pokeData={pokemonData} />
+						<PokeImage pokeData={pokemonData} />
+						<PokeStats pokeData={pokemonData} />
+					</div>
+					<div className="bottomComponents">
+						<PokeText pokeData={speciesData} basePokeData={pokemonData} />
+					</div>
 				</>
 			)}
 		</div>

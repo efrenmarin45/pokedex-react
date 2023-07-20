@@ -1,3 +1,8 @@
+* {
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 .hide {
 	display: none;
 }
@@ -105,7 +110,7 @@
 	background-color: aqua;
 }
 
-/* Pokedex Body */
+//* Pokedex Body *//
 .glassBody {
 	display: flex;
 	align-self: center;
@@ -129,13 +134,24 @@
 	margin: auto;
 }
 
+.topComponents {
+	display: flex;
+	width: 935px;
+	flex-direction: row;
+	align-items: center;
+}
+
+.bottomComponents {
+	color: white;
+}
+
 .imgContainer {
 	justify-content: center;
 	align-items: center;
 	align-self: center;
 	align-content: center;
 	margin: auto;
-	width: 25vw;
+	width: 30vw;
 	height: 33vh;
 	border: solid 2px yellow;
 }
@@ -145,22 +161,88 @@
 	text-align: center;
 	margin-top: 2em;
 	margin: 2em auto 0 auto;
-	padding: 0 15px;
+	padding: 1px 15px;
 	color: white;
+	font-size: 0.9rem;
 	border-radius: 5px;
-	background: #217eea;
-	box-shadow: inset 5px -5px 19px #0d325e, inset -5px 5px 19px #35caff;
+	background: #6f888b;
+	box-shadow: inset 5px -5px 34px #2c3638, inset -5px 5px 34px #b2dade;
+}
 
+.statsContainer {
+	margin: 0 1vw;
+	width: 15vw;
+	height: 25vh;
+	color: white;
+	font-size: 0.9rem;
+	border-radius: 5px;
+	background: #6f888b;
+	box-shadow: inset 5px -5px 34px #2c3638, inset -5px 5px 34px #b2dade;
+}
+
+.textBG {
+	display: flex;
+	justify-content: space-around;
+	color: #000000;
+	background-color: #ffffff;
+	border-radius: 5px;
+	margin: 10px;
+}
+
+.textBG > p:nth-last-of-type(2) {
+	color: #ffffff;
+}
+
+//* Color Themes *//
+.grassContainer {
 	border-radius: 5px;
 	background: #11a257;
 	box-shadow: inset 5px -5px 19px #074123, inset -5px 5px 19px #1bff8b;
-
-	border-radius: 5px;
-	background: #11a291;
-	box-shadow: inset 5px -5px 19px #07413a, inset -5px 5px 19px #1bffe8;
 }
 
-/* Search Bar */
+.waterContainer {
+	border-radius: 5px;
+	background: #217eea;
+	box-shadow: inset 5px -5px 19px #0d325e, inset -5px 5px 19px #35caff;
+}
+
+.fireContainer {
+	border-radius: 5px;
+	background: #a21111;
+	box-shadow: inset 5px -5px 34px #410707, inset -5px 5px 34px #ff1b1b;
+}
+
+.grassTextBG {
+	background: rgb(17, 162, 87);
+	background: linear-gradient(
+		90deg,
+		rgba(17, 162, 87, 1) 50%,
+		rgba(255, 255, 255, 1) 50%
+	);
+	box-shadow: inset 5px -5px 15px #074123, inset -5px 5px 15px #ffffff;
+}
+
+.waterTextBG {
+	background: rgb(33, 126, 234);
+	background: linear-gradient(
+		90deg,
+		rgb(33, 126, 234, 1) 50%,
+		rgba(255, 255, 255, 1) 50%
+	);
+	box-shadow: inset 5px -5px 15px #0d325e, inset -5px 5px 15px #ffffff;
+}
+
+.fireTextBG {
+	background: rgb(162, 17, 17);
+	background: linear-gradient(
+		90deg,
+		rgb(162, 17, 17, 1) 50%,
+		rgba(255, 255, 255, 1) 50%
+	);
+	box-shadow: inset 5px -5px 15px #410707, inset -5px 5px 15px #ffffff;
+}
+
+//* Search Bar *//
 .searchBar {
 	display: flex;
 	flex-direction: row;
@@ -258,7 +340,7 @@
 	cursor: pointer;
 }
 
-/* Pulse Button */
+//* Pulse Button *//
 .pulseBG {
 	align-self: center;
 	margin: -52px auto;
@@ -303,7 +385,7 @@
 	}
 }
 
-/* Blinking Lights */
+//* Blinking Lights *//
 .indicator-lights {
 	display: flex;
 	flex-direction: row;

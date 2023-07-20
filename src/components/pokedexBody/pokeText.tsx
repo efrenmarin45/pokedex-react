@@ -1,3 +1,5 @@
+import { getThemeContainerFlavorTypes } from "./pokeStats";
+
 interface PokeData {
 	pokeData: {
 		flavor_text_entries: [
@@ -8,13 +10,28 @@ interface PokeData {
 	};
 }
 
-const PokeText = ({ pokeData }: PokeData) => {
-	const flavorText =
-		pokeData !== undefined && pokeData.flavor_text_entries[0].flavor_text;
-	console.log(pokeData);
-	console.log(flavorText);
+interface BasePokeData {
+	basePokeData: {
+		types: [
+			type: {
+				type: {
+                    name: string
+                }
+			}
+		];
+	};
+}
+
+interface PokeTextProps extends PokeData, BasePokeData {}
+
+const PokeText = ({ pokeData, basePokeData }: PokeTextProps) => {
+	const flavorText = pokeData !== undefined && pokeData.flavor_text_entries[0].flavor_text;
+	const rawType = basePokeData !== undefined && basePokeData.types[0].type.name;
+	const pokeType = rawType.charAt(0).toUpperCase() + rawType.slice(1);
+	const typeThemeContainer = getThemeContainerFlavorTypes(pokeType);
+
 	return (
-		<div className='speciesTextContainer'>
+		<div className={typeThemeContainer}>
 			<p>{flavorText}</p>
 		</div>
 	);
