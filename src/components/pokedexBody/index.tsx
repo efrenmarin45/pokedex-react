@@ -22,7 +22,9 @@ const Container = () => {
 					</div>
 				</div>
 				<GlassBody checkOpen={{ isActive, setIsActive }} />
-				<div className='blocks-bottom' style={{margin: isActive ? "0 auto" : "5px auto 0 auto"}}>
+				<div
+					className='blocks-bottom'
+					style={{ margin: isActive ? "0 auto" : "5px auto 0 auto" }}>
 					<div className='outer-ring-bottom'>
 						<div className='inner-ring-bottom'>
 							<div className='inner-center-ring-bottom'></div>

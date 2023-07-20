@@ -8,7 +8,7 @@ const SearchBar = () => {
 
 	const handleUserInput = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setUserNameSearch(event.target.value);
-        setSubmitted(false);
+		setSubmitted(false);
 	};
 
 	const handleSubmit = () => {

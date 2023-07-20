@@ -68,7 +68,7 @@
 	height: 50px;
 	width: 100px;
 	border-radius: 150px 150px 0 0;
-	background-color: aqua;
+	background-color: #00ffff;
 }
 
 .outer-ring-bottom {
@@ -135,9 +135,29 @@
 	align-self: center;
 	align-content: center;
 	margin: auto;
-	width: 33vw;
+	width: 25vw;
 	height: 33vh;
-	background-color: yellow;
+	border: solid 2px yellow;
+}
+
+.speciesTextContainer {
+	width: 60%;
+	text-align: center;
+	margin-top: 2em;
+	margin: 2em auto 0 auto;
+	padding: 0 15px;
+	color: white;
+	border-radius: 5px;
+	background: #217eea;
+	box-shadow: inset 5px -5px 19px #0d325e, inset -5px 5px 19px #35caff;
+
+	border-radius: 5px;
+	background: #11a257;
+	box-shadow: inset 5px -5px 19px #074123, inset -5px 5px 19px #1bff8b;
+
+	border-radius: 5px;
+	background: #11a291;
+	box-shadow: inset 5px -5px 19px #07413a, inset -5px 5px 19px #1bffe8;
 }
 
 /* Search Bar */
@@ -219,6 +239,17 @@
 	letter-spacing: 0.8px;
 	color: black;
 	font-size: 13.4px;
+}
+
+.searchInfo {
+	font-size: 1rem;
+	font-size: 2vh;
+	text-align: center;
+	font-weight: bold;
+}
+
+.searchInfo p:nth-last-of-type(1) {
+	font-style: italic;
 }
 
 .submitBtn {

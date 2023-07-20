@@ -3,9 +3,9 @@ import Container from "./components/pokedexBody";
 
 function App() {
 	return (
-			<div className='background'>
-				<Container />
-			</div>
+		<div className='background'>
+			<Container />
+		</div>
 	);
 }
 

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MainClient } from "pokenode-ts";
+import pokeGif from "../../assets/ash_pikachu.gif";
 import PokeImage from "../pokedexBody/pokeImage";
 import PokeText from "../pokedexBody/pokeText";
 
@@ -44,9 +45,16 @@ const FetchPokeData = ({ userSelection }: FetchPokeProps) => {
 	}, [pokeName]);
 
 	return (
-		<div className="centralDataDisplay">
+		<div className='centralDataDisplay'>
 			{!pokemonData ? (
-				<p>Loading...</p>
+				<div className='searchInfo'>
+					<p>Searching for Pokemon...</p>
+					<img src={pokeGif} alt='Loading animation' style={{ width: "8vw" }} />
+					<p>
+						If search query does not generate results, please check the
+						spelling.
+					</p>
+				</div>
 			) : (
 				<>
 					<PokeImage pokeData={pokemonData} />
