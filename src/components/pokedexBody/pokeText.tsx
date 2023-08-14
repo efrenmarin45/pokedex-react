@@ -24,9 +24,9 @@ interface BasePokeData {
 
 interface PokeTextProps extends PokeData, BasePokeData {}
 
-const PokeText = ({ pokeData, basePokeData }: PokeTextProps) => {
-	const flavorText = pokeData !== undefined && pokeData.flavor_text_entries[0].flavor_text;
-	const rawType = basePokeData !== undefined && basePokeData.types[0].type.name;
+const PokeText = ({ pokeData }: PokeTextProps) => {
+	const flavorText = pokeData.pokeData?.flavor_text_entries[0]?.flavor_text || "Pokemon Description Not Available";
+	const rawType = pokeData.basePokeData.types[0]?.type.name || "";
 	const pokeType = rawType.charAt(0).toUpperCase() + rawType.slice(1);
 	const typeThemeContainer = getThemeContainerFlavorTypes(pokeType);
 

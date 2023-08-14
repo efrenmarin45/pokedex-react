@@ -151,22 +151,19 @@
 	align-self: center;
 	align-content: center;
 	margin: auto;
-	width: 30vw;
+	min-width: 400px;
 	height: 33vh;
-	border: solid 2px yellow;
 }
 
 .speciesTextContainer {
-	width: 60%;
+	height: 20vh;
 	text-align: center;
-	margin-top: 2em;
-	margin: 2em auto 0 auto;
 	padding: 1px 15px;
 	color: white;
 	font-size: 0.9rem;
-	border-radius: 5px;
 	background: #6f888b;
 	box-shadow: inset 5px -5px 34px #2c3638, inset -5px 5px 34px #b2dade;
+	z-index: 0;
 }
 
 .statsContainer {
@@ -187,33 +184,114 @@
 	background-color: #ffffff;
 	border-radius: 5px;
 	margin: 10px;
+	background: rgb(111, 136, 139);
+	background: linear-gradient(
+		90deg,
+		rgb(111, 136, 139, 1) 50%,
+		rgba(255, 255, 255, 1) 50%
+	);
+	box-shadow: inset 5px -5px 15px #2c3638, inset -5px 5px 15px #ffffff;
 }
 
 .textBG > p:nth-last-of-type(2) {
 	color: #ffffff;
 }
 
+.ddContainer {
+	position: relative;
+	margin: 0 1vw;
+	height: 40.2vh;
+	min-width: 490px;
+	background-color: mintcream;
+	border: 1px solid black;
+	overflow: hidden;
+}
+
+.drawerOne,
+.drawerTwo,
+.drawerThree,
+.drawerFour {
+	display: flex;
+	min-width: 490px;
+	height: 5vh;
+	background-color: #1bff8b;
+	border-bottom: 1px solid;
+	transition: height 1s;
+}
+
+.drawerOne,
+.drawerTwo,
+.drawerThree,
+.drawerFour,
+button {
+	justify-content: end;
+	align-items: start;
+}
+
+.drawerOne {
+	background-color: #e4c216;
+}
+
+.drawerBtn {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+.flavorTextContainer {
+	margin-top: 5vh;
+	z-index: 0;
+}
+
 //* Color Themes *//
 .grassContainer {
-	border-radius: 5px;
 	background: #11a257;
 	box-shadow: inset 5px -5px 19px #074123, inset -5px 5px 19px #1bff8b;
 }
 
 .waterContainer {
-	border-radius: 5px;
 	background: #217eea;
 	box-shadow: inset 5px -5px 19px #0d325e, inset -5px 5px 19px #35caff;
 }
 
 .fireContainer {
-	border-radius: 5px;
 	background: #a21111;
 	box-shadow: inset 5px -5px 34px #410707, inset -5px 5px 34px #ff1b1b;
 }
 
+.electricContainer {
+	color: rgb(0, 0, 0);
+	background: #ead321;
+	box-shadow: inset 5px -5px 34px #e4c216, inset -5px 5px 34px #ffff35;
+}
+
+.psychicContainer {
+	background: #991fea;
+	box-shadow: inset 5px -5px 34px #3d0c5e, inset -5px 5px 34px #f532ff;
+}
+
+.fairyContainer {
+	background: #ea1fd9;
+	box-shadow: inset 5px -5px 34px #5e0c57, inset -5px 5px 34px #ff32ff;
+}
+
+.fightingContainer {
+	background: #ea5c1f;
+	box-shadow: inset 5px -5px 34px #5e250c, inset -5px 5px 34px #ff9332;
+}
+
+.ghostContainer {
+	background: #7a1fea;
+	box-shadow: inset 5px -5px 34px #310c5e, inset -5px 5px 34px #c332ff;
+}
+
+.groundRockContainer {
+	background: #cc841e;
+	box-shadow: inset 5px -5px 34px #52350c, inset -5px 5px 34px #ffd330;
+}
+
 .grassTextBG {
-	background: rgb(17, 162, 87);
 	background: linear-gradient(
 		90deg,
 		rgba(17, 162, 87, 1) 50%,
@@ -223,7 +301,6 @@
 }
 
 .waterTextBG {
-	background: rgb(33, 126, 234);
 	background: linear-gradient(
 		90deg,
 		rgb(33, 126, 234, 1) 50%,
@@ -233,13 +310,42 @@
 }
 
 .fireTextBG {
-	background: rgb(162, 17, 17);
 	background: linear-gradient(
 		90deg,
 		rgb(162, 17, 17, 1) 50%,
 		rgba(255, 255, 255, 1) 50%
 	);
 	box-shadow: inset 5px -5px 15px #410707, inset -5px 5px 15px #ffffff;
+}
+
+.electricTextBG {
+	background: linear-gradient(90deg, #fcdb1e 50%, rgb(255, 255, 255) 50%);
+	box-shadow: inset 5px -5px 15px #f2cf67, inset -5px 5px 15px #ffffff;
+}
+
+.psychicTextBG {
+	background: linear-gradient(90deg, #991fea 50%, rgb(255, 255, 255) 50%);
+	box-shadow: inset 5px -5px 15px #3d0c5e, inset -5px 5px 15px #ffffff;
+}
+
+.fairyTextBG {
+	background: linear-gradient(90deg, #ea1fd9 50%, rgb(255, 255, 255) 50%);
+	box-shadow: inset 5px -5px 15px #5e0c57, inset -5px 5px 15px #ffffff;
+}
+
+.fightingTextBG {
+	background: linear-gradient(90deg, #ea5c1f 50%, rgb(255, 255, 255) 50%);
+	box-shadow: inset 5px -5px 15px #5e250c, inset -5px 5px 15px #ffffff;
+}
+
+.ghostTextBG {
+	background: linear-gradient(90deg, #7a1fea 50%, rgb(255, 255, 255) 50%);
+	box-shadow: inset 5px -5px 15px #310c5e, inset -5px 5px 15px #ffffff;
+}
+
+.groundRockTextBG {
+	background: linear-gradient(90deg, #cc841e 50%, rgb(255, 255, 255) 50%);
+	box-shadow: inset 5px -5px 15px #52350c, inset -5px 5px 15px #ffffff;
 }
 
 //* Search Bar *//

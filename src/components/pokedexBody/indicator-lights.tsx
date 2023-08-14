@@ -31,7 +31,7 @@ const LightIndicator = () => {
 		let intervalID: number | undefined;
 		intervalID = setInterval(
 			() => lightIntervals(redLightRef, yellowLightRef, greenLightRef),
-			1500
+			1000
 		);
 		return () => clearInterval(intervalID);
 	});

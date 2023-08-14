@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { MainClient } from "pokenode-ts";
 import pokeGif from "../../assets/ash_pikachu.gif";
-import PokeImage from "../pokedexBody/pokeImage";
+import { PokeImage } from "../pokedexBody/pokeImage";
 import PokeText from "../pokedexBody/pokeText";
 import PokeStats from "../pokedexBody/pokeStats";
+import DropDownDrawers from "../pokedexBody/dropDown";
 
 interface FetchPokeProps {
 	userSelection: string;
@@ -59,13 +60,14 @@ const FetchPokeData = ({ userSelection }: FetchPokeProps) => {
 			) : (
 				<>
 					<div className='topComponents'>
-						<PokeStats pokeData={pokemonData} />
 						<PokeImage pokeData={pokemonData} />
-						<PokeStats pokeData={pokemonData} />
+						<DropDownDrawers pokeData={speciesData} basePokeData={pokemonData} />
+						{/* <PokeStats pokeData={pokemonData} />
+						<PokeStats pokeData={pokemonData} /> */}
 					</div>
-					<div className="bottomComponents">
+					{/* <div className='bottomComponents'>
 						<PokeText pokeData={speciesData} basePokeData={pokemonData} />
-					</div>
+					</div> */}
 				</>
 			)}
 		</div>

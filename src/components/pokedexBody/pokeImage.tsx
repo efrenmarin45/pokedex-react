@@ -11,7 +11,7 @@ interface PokeData {
 	};
 }
 
-const PokeImage = ({ pokeData }: PokeData) => {
+export const PokeImage = ({ pokeData }: PokeData) => {
 	const pokeDreamImage =
 		pokeData && pokeData.sprites.other.dream_world.front_default;
 	return (
@@ -24,5 +24,3 @@ const PokeImage = ({ pokeData }: PokeData) => {
 		</div>
 	);
 };
-
-export default PokeImage;
