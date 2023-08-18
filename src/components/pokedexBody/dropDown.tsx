@@ -2,6 +2,7 @@ import { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import PokeText from "./pokeText";
+import PokeStats from "./pokeStats";
 
 const DropDownDrawers = (pokeData, basePokeData) => {
 	const [isOpenOne, setIsOpenOne] = useState(false);
@@ -22,6 +23,10 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 				<div
 					className='drawerOne'
 					style={{ height: isOpenOne ? "25vh" : "5vh" }}>
+					<p className='statsTitle'>Poke Stats</p>
+					{/* <div style={{ height: isOpenOne ? "25vh" : "5vh" }}> */}
+						<PokeStats pokeData={pokeData} />
+					{/* </div> */}
 					<button className='drawerBtn' onClick={() => handleDrawerClick(1)}>
 						{isOpenOne ? (
 							<ExpandLessIcon
@@ -39,6 +44,7 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 				<div
 					className='drawerTwo'
 					style={{ height: isOpenTwo ? "25vh" : "5vh" }}>
+					<p className='statsTitle'>Poke Stats</p>
 					<button className='drawerBtn' onClick={() => handleDrawerClick(2)}>
 						{isOpenTwo ? (
 							<ExpandLessIcon
@@ -56,6 +62,7 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 				<div
 					className='drawerThree'
 					style={{ height: isOpenThree ? "25vh" : "5vh" }}>
+					<p className='statsTitle'>Poke Stats</p>
 					<button className='drawerBtn' onClick={() => handleDrawerClick(3)}>
 						{isOpenThree ? (
 							<ExpandLessIcon
@@ -75,9 +82,10 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 					style={{
 						height: isOpenFour ? "25vh" : "5vh",
 						position: "absolute",
-                        width: "100%",
-                        zIndex: 2,
+						width: "100%",
+						zIndex: 2,
 					}}>
+					<p className='statsTitle'>Poke Stats</p>
 					<button className='drawerBtn' onClick={() => handleDrawerClick(4)}>
 						{isOpenFour ? (
 							<ExpandLessIcon

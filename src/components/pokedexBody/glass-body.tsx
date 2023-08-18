@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import SearchBar from "./searchBar";
-import FetchPokeData from "../api/api";
 
 const GlassBody = (props: {
 	checkOpen: { isActive: boolean; setIsActive: (value: boolean) => void };

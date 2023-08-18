@@ -1,5 +1,6 @@
 interface PokeData {
 	pokeData: {
+        basePokeData: any;
 		name: string;
 		height: number;
 		weight: number;
@@ -64,10 +65,11 @@ export const getThemeTextTypes = (pokeType: string) => {
 }
 
 const PokeStats = ({ pokeData }: PokeData) => {
-	const rawType = pokeData.types[0].type.name;
+    const data = pokeData.basePokeData;
+	const rawType = data?.types[0].type.name;
     const pokeType = rawType.charAt(0).toUpperCase() + rawType.slice(1);
-	const decWeight = pokeData.weight;
-	const decHeight = pokeData.height;
+	const decWeight = data?.weight;
+	const decHeight = data.height;
 	const pokeWeight = ((decWeight / 10) * 2.2).toFixed(1);
 	const totalHeight = (decHeight / 10) * 3.28;
 	const heightFeet = Math.floor(totalHeight);

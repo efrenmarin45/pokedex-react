@@ -51,7 +51,7 @@ const FetchPokeData = ({ userSelection }: FetchPokeProps) => {
 			{!pokemonData ? (
 				<div className='searchInfo'>
 					<p>Searching for Pokemon...</p>
-					<img src={pokeGif} alt='Loading animation' style={{ width: "8vw" }} />
+					<img src={pokeGif} alt='Loading animation' style={{ width: "20vh" }} />
 					<p>
 						If search query does not generate results, please check the
 						spelling.
