@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import pokeball from "../../assets/pokeball3.png";
 import PokeText from "./pokeText";
 import PokeStats from "./pokeStats";
 
@@ -23,59 +24,65 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 				<div
 					className='drawerOne'
 					style={{ height: isOpenOne ? "25vh" : "5vh" }}>
-					<p className='statsTitle'>Poke Stats</p>
-					{/* <div style={{ height: isOpenOne ? "25vh" : "5vh" }}> */}
+					<div className='dd-topRow'>
+						<div className='statsTitle'>Poke Stats</div>
+						<button className='drawerBtn' onClick={() => handleDrawerClick(1)}>
+							{isOpenOne ? (
+								<ExpandLessIcon
+								sx={{ backgroundColor: "#b50000", color: "#ffffff" }}
+								fontSize='large'
+								/>
+								) : (
+									<ExpandMoreIcon
+									sx={{ backgroundColor: "#b50000", color: "#ffffff" }}
+									fontSize='large'
+									/>
+									)}
+						</button>
+					</div>
+					<div className='contentRow'>
 						<PokeStats pokeData={pokeData} />
-					{/* </div> */}
-					<button className='drawerBtn' onClick={() => handleDrawerClick(1)}>
-						{isOpenOne ? (
-							<ExpandLessIcon
-								sx={{ backgroundColor: "#e4c216", color: "#ffffff" }}
-								fontSize='large'
-							/>
-						) : (
-							<ExpandMoreIcon
-								sx={{ backgroundColor: "#e4c216", color: "#ffffff" }}
-								fontSize='large'
-							/>
-						)}
-					</button>
+					</div>
 				</div>
 				<div
 					className='drawerTwo'
 					style={{ height: isOpenTwo ? "25vh" : "5vh" }}>
-					<p className='statsTitle'>Poke Stats</p>
-					<button className='drawerBtn' onClick={() => handleDrawerClick(2)}>
-						{isOpenTwo ? (
-							<ExpandLessIcon
-								sx={{ backgroundColor: "#e4c216", color: "#ffffff" }}
-								fontSize='large'
-							/>
-						) : (
-							<ExpandMoreIcon
-								sx={{ backgroundColor: "#e4c216", color: "#ffffff" }}
-								fontSize='large'
-							/>
-						)}
-					</button>
+					<div className='dd-topRow'>
+						<p className='statsTitle'>Poke Stats</p>
+						<button className='drawerBtn' onClick={() => handleDrawerClick(2)}>
+							{isOpenTwo ? (
+								<ExpandLessIcon
+									sx={{ backgroundColor: "#b50000", color: "#ffffff" }}
+									fontSize='large'
+								/>
+							) : (
+								<ExpandMoreIcon
+									sx={{ backgroundColor: "#b50000", color: "#ffffff" }}
+									fontSize='large'
+								/>
+							)}
+						</button>
+					</div>
 				</div>
 				<div
 					className='drawerThree'
 					style={{ height: isOpenThree ? "25vh" : "5vh" }}>
-					<p className='statsTitle'>Poke Stats</p>
-					<button className='drawerBtn' onClick={() => handleDrawerClick(3)}>
-						{isOpenThree ? (
-							<ExpandLessIcon
-								sx={{ backgroundColor: "#e4c216", color: "#ffffff" }}
-								fontSize='large'
-							/>
-						) : (
-							<ExpandMoreIcon
-								sx={{ backgroundColor: "#e4c216", color: "#ffffff" }}
-								fontSize='large'
-							/>
-						)}
-					</button>
+					<div className='dd-topRow'>
+						<p className='statsTitle'>Poke Stats</p>
+						<button className='drawerBtn' onClick={() => handleDrawerClick(3)}>
+							{isOpenThree ? (
+								<ExpandLessIcon
+									sx={{ backgroundColor: "#b50000", color: "#ffffff" }}
+									fontSize='large'
+								/>
+							) : (
+								<ExpandMoreIcon
+									sx={{ backgroundColor: "#b50000", color: "#ffffff" }}
+									fontSize='large'
+								/>
+							)}
+						</button>
+					</div>
 				</div>
 				<div
 					className='drawerFour'
@@ -85,20 +92,22 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 						width: "100%",
 						zIndex: 2,
 					}}>
-					<p className='statsTitle'>Poke Stats</p>
-					<button className='drawerBtn' onClick={() => handleDrawerClick(4)}>
-						{isOpenFour ? (
-							<ExpandLessIcon
-								sx={{ backgroundColor: "#e4c216", color: "#ffffff" }}
-								fontSize='large'
-							/>
-						) : (
-							<ExpandMoreIcon
-								sx={{ backgroundColor: "#e4c216", color: "#ffffff" }}
-								fontSize='large'
-							/>
-						)}
-					</button>
+					<div className='dd-topRow'>
+						<p className='statsTitle'>Poke Stats</p>
+						<button className='drawerBtn' onClick={() => handleDrawerClick(4)}>
+							{isOpenFour ? (
+								<ExpandLessIcon
+									sx={{ backgroundColor: "#b50000", color: "#ffffff" }}
+									fontSize='large'
+								/>
+							) : (
+								<ExpandMoreIcon
+									sx={{ backgroundColor: "#b50000", color: "#ffffff" }}
+									fontSize='large'
+								/>
+							)}
+						</button>
+					</div>
 				</div>
 				<div className='flavorTextContainer'>
 					<PokeText pokeData={pokeData} />
