@@ -64,7 +64,7 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 						</button>
 					</div>
 					<div className='contentRow'>
-						<Evolution pokeData={pokeData} basePokeData={basePokeData}/>
+						<Evolution pokeData={pokeData} basePokeData={basePokeData} />
 					</div>
 				</div>
 				<div
