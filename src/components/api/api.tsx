@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { MainClient } from "pokenode-ts";
 import pokeGif from "../../assets/ash_pikachu.gif";
-import { PokeImage } from "../pokedexBody/pokeImage";
-import PokeText from "../pokedexBody/pokeText";
-import PokeStats from "../pokedexBody/pokeStats";
+import { PokeImage } from "../pokedexBody/content/pokeImage";
 import DropDownDrawers from "../pokedexBody/dropDown";
 
 interface FetchPokeProps {
@@ -51,7 +49,11 @@ const FetchPokeData = ({ userSelection }: FetchPokeProps) => {
 			{!pokemonData ? (
 				<div className='searchInfo'>
 					<p>Searching for Pokemon...</p>
-					<img src={pokeGif} alt='Loading animation' style={{ width: "20vh" }} />
+					<img
+						src={pokeGif}
+						alt='Loading animation'
+						style={{ width: "20vh" }}
+					/>
 					<p>
 						If search query does not generate results, please check the
 						spelling.
@@ -61,13 +63,11 @@ const FetchPokeData = ({ userSelection }: FetchPokeProps) => {
 				<>
 					<div className='topComponents'>
 						<PokeImage pokeData={pokemonData} />
-						<DropDownDrawers pokeData={speciesData} basePokeData={pokemonData} />
-						{/* <PokeStats pokeData={pokemonData} />
-						<PokeStats pokeData={pokemonData} /> */}
+						<DropDownDrawers
+							pokeData={speciesData}
+							basePokeData={pokemonData}
+						/>
 					</div>
-					{/* <div className='bottomComponents'>
-						<PokeText pokeData={speciesData} basePokeData={pokemonData} />
-					</div> */}
 				</>
 			)}
 		</div>
