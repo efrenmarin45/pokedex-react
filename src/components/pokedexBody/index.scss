@@ -146,6 +146,7 @@
 	color: white;
 }
 
+//* Main Pokemon Image *//
 .imgContainer {
 	justify-content: center;
 	align-items: center;
@@ -262,6 +263,20 @@
 	background-repeat: repeat;
 }
 
+.drawerThree {
+	background-image: url(../../assets/pikaPic.jpg);
+	height: 100vh;
+	background-size: 100%;
+	background-repeat: repeat;
+}
+
+.drawerFour {
+	background-image: url(../../assets/eveeEvolution.jpeg);
+	height: 100vh;
+	background-size: 80%;
+	background-repeat: repeat;
+}
+
 .drawerBtn {
 	cursor: pointer;
 	border: none;
@@ -303,6 +318,7 @@
 
 .evolutionStack > p {
 	color: white;
+	font-size: 1.5vh;
 	text-shadow: 1px 1px 3px black;
 	padding: 0.7vh;
 	text-align: center;
@@ -328,11 +344,9 @@
 
 .noEvolution > p {
 	margin: 0;
-	height: 3vh;
 	color: white;
 	text-shadow: 1px 1px 3px black;
 	padding: 0.7vh;
-	text-align: center;
 	background: rgba(18, 18, 18, 0.3);
 	border-radius: 10px;
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -358,7 +372,6 @@
 }
 
 .electricContainer {
-	color: rgb(0, 0, 0);
 	background: #ead321;
 	box-shadow: inset 5px -5px 34px #e4c216, inset -5px 5px 34px #ffff35;
 }
@@ -418,6 +431,10 @@
 .electricTextBG {
 	background: linear-gradient(90deg, #fcdb1e 50%, rgb(255, 255, 255) 50%);
 	box-shadow: inset 5px -5px 15px #f2cf67, inset -5px 5px 15px #ffffff;
+}
+
+.electricTextBG > p:nth-child(1) {
+	text-shadow: 1px 1px 3px black;
 }
 
 .psychicTextBG {

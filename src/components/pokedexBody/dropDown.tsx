@@ -4,6 +4,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import PokeText from "./content/pokeText";
 import PokeStats from "./content/pokeStats";
 import Evolution from "./content/evolution";
+import GameAppearance from "./content/gameAppearance";
 
 const DropDownDrawers = (pokeData, basePokeData) => {
 	const [isOpenOne, setIsOpenOne] = useState(false);
@@ -86,6 +87,7 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 							)}
 						</button>
 					</div>
+					<GameAppearance  pokeData={pokeData} basePokeData={basePokeData} />
 				</div>
 				<div
 					className='drawerFour'

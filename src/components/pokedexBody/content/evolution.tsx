@@ -15,7 +15,7 @@ const Evolution = ({ pokeData }: PokeData) => {
 	const regex = /\/(\d+)\/$/;
 	const match = evolutionNum?.match(regex);
 	const pokeNum = match ? match[1] : null;
-	const imgURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeNum}.svg`;
+	const imgURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeNum}.png`;
 
 	return (
 		<div className='evolutionContainer'>
