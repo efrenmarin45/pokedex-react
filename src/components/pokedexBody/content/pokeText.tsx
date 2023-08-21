@@ -2,6 +2,8 @@ import { getThemeContainerFlavorTypes } from "./pokeStats";
 
 interface PokeData {
 	pokeData: {
+		pokeData: any;
+		basePokeData: any;
 		flavor_text_entries: [
 			{
 				flavor_text: string | undefined;
