@@ -136,7 +136,7 @@
 
 .topComponents {
 	display: flex;
-	max-width: 935px;
+	width: 935px;
 	justify-content: space-around;
 	flex-direction: row;
 	align-items: center;
@@ -146,6 +146,37 @@
 	color: white;
 }
 
+//* Error Handling *//
+.errorContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 4vh;
+}
+
+.errorContainer > img{
+	height: 12vh;
+	width: 12vh;
+}
+
+.errorHandlingText {
+	text-align: center;
+	font-size: 2vh;
+	font-style: italic;
+	font-weight: bold;
+}
+
+@keyframes spinning {
+	from { transform: rotate(0deg) }
+	to { transform: rotate(360deg) }
+  }
+  .spin {
+	animation-name: spinning;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+  }
+
 //* Main Pokemon Image *//
 .imgContainer {
 	justify-content: center;
@@ -153,7 +184,7 @@
 	align-self: center;
 	align-content: center;
 	margin: 0 1vw;
-	min-width: 400px;
+	width: 400px;
 	height: 33vh;
 }
 
@@ -207,9 +238,8 @@
 //* Dropdown
 .ddContainer {
 	position: relative;
-	margin: 0 1vw;
 	height: 40.2vh;
-	min-width: 450px;
+	width: 450px;
 	background-color: mintcream;
 	border: 1px solid black;
 	overflow: hidden;
@@ -223,7 +253,7 @@
 .drawerFour {
 	display: flex;
 	align-items: flex-start;
-	min-width: 450px;
+	width: 450px;
 	height: 5vh;
 	background-color: #1bff8900;
 	border-bottom: 1px solid;
@@ -234,7 +264,7 @@
 
 .dd-topRow {
 	display: flex;
-	width: 100%;
+	width: 450px;
 	flex-direction: row;
 	align-content: space-between;
 	justify-content: space-between;
@@ -297,8 +327,8 @@
 
 //* Evolution *//
 .evolutionContainer {
-	margin: 2vh 1vw 0;
-	width: 450px;
+	margin: 2vh 10px;
+	width: 430px;
 	height: 17vh;
 	box-shadow: inset 5px -5px 34px #2c3638, inset -5px 5px 34px #b2dade;
 	background: rgba(0, 255, 255, 0.3);
@@ -357,8 +387,8 @@
 
 //* Game Appearances *//
 .gameAppearanceContainer {
-	margin: 2vh 1vw 0;
-	width: 450px;
+	margin: 2vh 10px;
+	width: 430px;
 	height: 17vh;
 	box-shadow: inset 5px -5px 34px #2c3638, inset -5px 5px 34px #b2dade;
 	background: rgba(0, 255, 255, 0.3);
@@ -378,7 +408,6 @@
 
 .gameStack > p {
 	color: white;
-	font-size: 1.5vh;
 	text-shadow: 1px 1px 3px black;
 	padding: 0.7vh;
 	text-align: center;
@@ -395,7 +424,41 @@
 	margin: 0;
 }
 
+//* Top Abilities *//
+.abilityContainer {
+	margin: 2vh 10px;
+	width: 430px;
+	height: 17vh;
+	box-shadow: inset 5px -5px 34px #2c3638, inset -5px 5px 34px #b2dade;
+	background: rgba(0, 255, 255, 0.3);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 2px solid rgba(0, 255, 255, 0.3);
+}
 
+.abilityStack {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 17vh;
+}
+
+.abilityStack > p {
+	color: white;
+	font-size: 1.5vh;
+	text-shadow: 1px 1px 3px black;
+	padding: 1vh;
+	text-align: center;
+	background: rgba(18, 18, 18, 0.3);
+	border-radius: 10px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(18, 18, 18, 0.3);
+}
 
 //* Color Themes *//
 .grassContainer {
@@ -586,7 +649,6 @@
 }
 
 .searchInfo {
-	font-size: 1rem;
 	font-size: 2vh;
 	text-align: center;
 	font-weight: bold;

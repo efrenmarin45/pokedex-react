@@ -5,6 +5,7 @@ import PokeText from "./content/pokeText";
 import PokeStats from "./content/pokeStats";
 import Evolution from "./content/evolution";
 import GameAppearance from "./content/gameAppearance";
+import Abilities from "./content/abilities";
 
 const DropDownDrawers = (pokeData, basePokeData) => {
 	const [isOpenOne, setIsOpenOne] = useState(false);
@@ -110,6 +111,7 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 							)}
 						</button>
 					</div>
+					<Abilities pokeData={pokeData} basePokeData={basePokeData} />
 				</div>
 				<div className='flavorTextContainer'>
 					<PokeText pokeData={pokeData} />
