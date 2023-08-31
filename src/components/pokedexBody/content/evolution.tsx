@@ -1,13 +1,4 @@
-interface PokeData {
-	pokeData: {
-		pokeData: any;
-		evolves_from_species: {
-			name: string;
-		};
-	};
-}
-
-const Evolution = ({ pokeData }: PokeData) => {
+const Evolution = (pokeData) => {
 	const evolution = pokeData.pokeData?.evolves_from_species;
 	const evolutionName =
 		evolution?.name.charAt(0).toUpperCase() + evolution?.name.slice(1);

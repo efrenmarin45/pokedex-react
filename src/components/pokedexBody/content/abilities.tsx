@@ -1,16 +1,6 @@
-interface PokeData {
-	pokeData: {
-		basePokeData: any;
-		pokeData: any;
-		evolves_from_species: {
-			name: string;
-		};
-	};
-}
-
-const Abilities = ({ pokeData }: PokeData) => {
+const Abilities = (pokeData) => {
 	const rawAbilities = pokeData.basePokeData.abilities;
-	const abilitiesList = [];
+	const abilitiesList: string[] = [];
 
 	for (let items of rawAbilities){
 		abilitiesList.push(items.ability.name);

@@ -1,21 +1,5 @@
 import { Tilt } from "react-tilt";
 
-interface PokeData {
-	pokeData: {
-		name: string;
-		sprites: {
-			other: {
-				dream_world: {
-					front_default: string;
-				};
-				"official-artwork": {
-					front_default: string;
-				};
-			};
-		};
-	};
-}
-
 const defaultOptions = {
 	reverse: true,
 	max: 35,
@@ -28,7 +12,7 @@ const defaultOptions = {
 	easing: "cubic-bezier(.03,.98,.52,.99)",
 };
 
-export const PokeImage = ({ pokeData }: PokeData) => {
+export const PokeImage = (pokeData) => {
 	const pokeDreamImage = pokeData?.sprites.other.dream_world.front_default;
 	const pokeAltImage =
 		pokeData?.sprites.other["official-artwork"].front_default;

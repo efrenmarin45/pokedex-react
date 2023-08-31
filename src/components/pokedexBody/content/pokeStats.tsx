@@ -1,18 +1,3 @@
-interface PokeData {
-	pokeData: {
-		basePokeData: any;
-		name: string;
-		height: number;
-		weight: number;
-		types: [
-			type: {
-				type: {
-					name: string;
-				};
-			}
-		];
-	};
-}
 const typeContainerMap: { [key: string]: string } = {
 	Grass: "grassContainer statsContainer",
 	Water: "waterContainer statsContainer",
@@ -64,7 +49,7 @@ export const getThemeTextTypes = (pokeType: string) => {
 	return typeTextMap[pokeType] || "textBG";
 };
 
-const PokeStats = ({ pokeData }: PokeData) => {
+const PokeStats = (pokeData) => {
 	const data = pokeData.basePokeData;
 	const rawType = data?.types[0].type.name;
 	const pokeType = rawType.charAt(0).toUpperCase() + rawType.slice(1);

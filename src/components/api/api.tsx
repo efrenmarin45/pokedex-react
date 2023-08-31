@@ -4,29 +4,11 @@ import pokeGif from "../../assets/ash_pikachu.gif";
 import { PokeImage } from "../pokedexBody/content/pokeImage";
 import DropDownDrawers from "../pokedexBody/dropDown";
 import pokeError from "../../assets/togepiError.png"
+import { Pokemon, Search, PokemonSpecies } from "../interface";
 
-interface FetchPokeProps {
-	userSelection: string;
-}
-
-interface PokeData {
-	name: string;
-	sprites: {
-		other?: {
-			dream_world?: {
-				front_default: string | null;
-			};
-		};
-	};
-}
-
-interface SpeciesData {
-	flavor_text_entries: {};
-}
-
-const FetchPokeData = ({ userSelection }: FetchPokeProps) => {
-	const [pokemonData, setPokemonData] = useState<PokeData | null>(null);
-	const [speciesData, setSpeciesData] = useState<SpeciesData | null>(null);
+const FetchPokeData = ({ userSelection }: Search) => {
+	const [pokemonData, setPokemonData] = useState<Pokemon | null>(null);
+	const [speciesData, setSpeciesData] = useState<PokemonSpecies | null>(null);
 	const [apiError, setApiError] = useState(false);
 	const api = new MainClient();
 	let pokeName = userSelection.toLowerCase();
@@ -34,7 +16,7 @@ const FetchPokeData = ({ userSelection }: FetchPokeProps) => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const data: PokeData = await api.pokemon.getPokemonByName(pokeName);
+				const data = await api.pokemon.getPokemonByName(pokeName);
 				const species = await api.pokemon.getPokemonSpeciesByName(pokeName);
 				setPokemonData(data);
 				setSpeciesData(species);

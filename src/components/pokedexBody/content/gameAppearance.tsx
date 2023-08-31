@@ -14,21 +14,6 @@ import violet from "../../../assets/violetVersion.png";
 import sword from "../../../assets/swordVersion.png";
 import { Tilt } from "react-tilt";
 
-interface BasePokeData {
-	pokeData: {
-		pokeData: any;
-		basePokeData: any;
-		game_indices: [
-			version: {
-				name: string;
-			}
-		];
-		generation: {
-			name: string;
-		};
-	};
-}
-
 const gameMap = [
 	{
 		title: "Blue Version",
@@ -102,7 +87,7 @@ const gameMap = [
 	},
 ];
 
-const GameAppearance = ({ pokeData }: BasePokeData) => {
+const GameAppearance = (pokeData) => {
 	const gameIndices = pokeData.basePokeData?.game_indices[0]?.version.name;
 	const pokeGeneration = pokeData.pokeData?.generation.name;
 	const gameVersion = gameMap.find(

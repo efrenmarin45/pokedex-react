@@ -7,13 +7,13 @@ import Evolution from "./content/evolution";
 import GameAppearance from "./content/gameAppearance";
 import Abilities from "./content/abilities";
 
-const DropDownDrawers = (pokeData, basePokeData) => {
+const DropDownDrawers = (pokeData) => {
 	const [isOpenOne, setIsOpenOne] = useState(false);
 	const [isOpenTwo, setIsOpenTwo] = useState(false);
 	const [isOpenThree, setIsOpenThree] = useState(false);
 	const [isOpenFour, setIsOpenFour] = useState(false);
 
-	const handleDrawerClick = (drawerIndex) => {
+	const handleDrawerClick = (drawerIndex: number) => {
 		setIsOpenOne(drawerIndex === 1 ? !isOpenOne : false);
 		setIsOpenTwo(drawerIndex === 2 ? !isOpenTwo : false);
 		setIsOpenThree(drawerIndex === 3 ? !isOpenThree : false);
@@ -66,7 +66,7 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 						</button>
 					</div>
 					<div className='contentRow'>
-						<Evolution pokeData={pokeData} basePokeData={basePokeData} />
+						<Evolution pokeData={pokeData} />
 					</div>
 				</div>
 				<div
@@ -88,7 +88,7 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 							)}
 						</button>
 					</div>
-					<GameAppearance  pokeData={pokeData} basePokeData={basePokeData} />
+					<GameAppearance  pokeData={pokeData} />
 				</div>
 				<div
 					className='drawerFour'
@@ -111,7 +111,7 @@ const DropDownDrawers = (pokeData, basePokeData) => {
 							)}
 						</button>
 					</div>
-					<Abilities pokeData={pokeData} basePokeData={basePokeData} />
+					<Abilities pokeData={pokeData} />
 				</div>
 				<div className='flavorTextContainer'>
 					<PokeText pokeData={pokeData} />

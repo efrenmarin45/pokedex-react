@@ -154,7 +154,7 @@
 	line-height: 4vh;
 }
 
-.errorContainer > img{
+.errorContainer > img {
 	height: 12vh;
 	width: 12vh;
 }
@@ -167,15 +167,19 @@
 }
 
 @keyframes spinning {
-	from { transform: rotate(0deg) }
-	to { transform: rotate(360deg) }
-  }
-  .spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.spin {
 	animation-name: spinning;
 	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-  }
+}
 
 //* Main Pokemon Image *//
 .imgContainer {
@@ -399,7 +403,7 @@
 	border: 2px solid rgba(0, 255, 255, 0.3);
 }
 
-.gameStack{
+.gameStack {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -749,4 +753,69 @@
 	border: none;
 	background-color: transparent;
 	padding: 0;
+}
+
+@media screen and (max-width: 970px) {
+	.blocks-top,
+	.blocks-bottom {
+		width: 90vw;
+		height: 60px;
+	}
+
+	.outer-ring-top,
+	.outer-ring-bottom {
+		height: 55px;
+		width: 120px;
+	}
+
+	.inner-ring-top,
+	.inner-ring-bottom{
+		height: 45px;
+		width: 100px;
+	}
+
+	.inner-center-ring-top,
+	.inner-center-ring-bottom{
+		height: 30px;
+		width: 60px;
+	}
+
+	.outer-ring-bottom {
+		margin-top: 3px;
+	}
+
+	.inner-ring-bottom {
+		margin-top: -1px;
+	}
+
+	.inner-center-ring-bottom {
+		margin-top: 1px;
+	}
+
+	.pulseBG {
+		width: 55px;
+		height: 55px;
+		margin: -32px auto;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(0.25);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+		}
+	
+		70% {
+			transform: scale(.60);
+			box-shadow: 0 0 0 100px rgba(0, 0, 0, 0);
+		}
+	
+		100% {
+			transform: scale(0.25);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		}
+	}
+
+	.glassBody {
+		width: 88vw;
+	}
 }
