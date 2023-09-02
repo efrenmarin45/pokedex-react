@@ -646,7 +646,7 @@
 	outline: none;
 	background-color: rgb(240, 239, 247);
 	border-radius: 30px;
-	padding-left: 15px;
+	padding-left: 10px;
 	letter-spacing: 0.8px;
 	color: black;
 	font-size: 13.4px;
@@ -769,13 +769,13 @@
 	}
 
 	.inner-ring-top,
-	.inner-ring-bottom{
+	.inner-ring-bottom {
 		height: 45px;
 		width: 100px;
 	}
 
 	.inner-center-ring-top,
-	.inner-center-ring-bottom{
+	.inner-center-ring-bottom {
 		height: 30px;
 		width: 60px;
 	}
@@ -785,7 +785,7 @@
 	}
 
 	.inner-ring-bottom {
-		margin-top: -1px;
+		margin-top: -3px;
 	}
 
 	.inner-center-ring-bottom {
@@ -793,8 +793,8 @@
 	}
 
 	.pulseBG {
-		width: 55px;
-		height: 55px;
+		width: 60px;
+		height: 60px;
 		margin: -32px auto;
 	}
 
@@ -803,19 +803,149 @@
 			transform: scale(0.25);
 			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
 		}
-	
+
 		70% {
-			transform: scale(.60);
+			transform: scale(0.6);
 			box-shadow: 0 0 0 100px rgba(0, 0, 0, 0);
 		}
-	
+
 		100% {
 			transform: scale(0.25);
 			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 		}
 	}
 
+	.light-trio {
+		height: 1.15em;
+		width: 1.15em;
+	}
+
 	.glassBody {
-		width: 88vw;
+		width: 86vw;
+	}
+
+	.closeBtn,
+	.hideInSight {
+		margin: 10px 0 0 20px;
+	}
+
+	.searchBar {
+		width: 210px;
+		height: 45px;
+	}
+
+	.searchBar > input {
+		width: 150px;
+		height: 30px;
+		font-size: 0.7em;
+	}
+
+	.searchInfo {
+		font-size: 2vh;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.errorHandlingText {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.blocks-top,
+	.blocks-bottom {
+		height: 40px;
+	}
+
+	.outer-ring-top,
+	.outer-ring-bottom {
+		height: 30px;
+		width: 70px;
+	}
+
+	.inner-ring-top,
+	.inner-ring-bottom {
+		height: 30px;
+		width: 60px;
+	}
+
+	.inner-center-ring-top,
+	.inner-center-ring-bottom {
+		height: 20px;
+		width: 45px;
+	}
+
+	.outer-ring-top {
+		margin-top: 2px;
+	}
+
+	.inner-ring-top {
+		margin-top: 3px;
+	}
+
+	.inner-center-ring-top {
+		margin-top: -3px;
+	}
+
+	.outer-ring-bottom {
+		margin-top: -1px;
+	}
+
+	.inner-ring-bottom {
+		margin-top: -1px;
+		height: 25px;
+	}
+
+	.inner-center-ring-bottom {
+		margin-top: 2px;
+	}
+
+	.pulseBG {
+		width: 46px;
+		height: 48px;
+		margin: -26px auto;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(0.05);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+		}
+
+		70% {
+			transform: scale(0.4);
+			box-shadow: 0 0 0 100px rgba(0, 0, 0, 0);
+		}
+
+		100% {
+			transform: scale(0.05);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		}
+	}
+
+	.light-trio {
+		margin: 10px 15px 0 0;
+		height: 0.8em;
+		width: 0.8em;
+	}
+
+	.glassBody {
+		width: 85vw;
+	}
+
+	.errorHandlingText {
+		font-size: 0.6em;
+	}
+
+	.searchBar {
+		width: 200px;
+		height: 40px;
+	}
+
+	.searchBar > input {
+		width: 155px;
+		height: 25px;
+		font-size: 0.5em;
+		margin-left: 15px;
 	}
 }

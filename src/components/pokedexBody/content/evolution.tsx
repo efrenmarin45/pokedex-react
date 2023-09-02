@@ -1,5 +1,6 @@
-const Evolution = (pokeData) => {
-	const evolution = pokeData.pokeData?.evolves_from_species;
+const Evolution = (evolutionData) => {
+	const data = evolutionData.evolutionData;
+	const evolution = data.speciesData.evolves_from_species;
 	const evolutionName =
 		evolution?.name.charAt(0).toUpperCase() + evolution?.name.slice(1);
 	const evolutionNum = evolution?.url;

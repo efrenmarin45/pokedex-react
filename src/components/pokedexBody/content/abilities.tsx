@@ -1,5 +1,6 @@
-const Abilities = (pokeData) => {
-	const rawAbilities = pokeData.basePokeData.abilities;
+const Abilities = (abilityData) => {
+	const data = abilityData.abilityData.pokemonData;
+	const rawAbilities = data.abilities;
 	const abilitiesList: string[] = [];
 
 	for (let items of rawAbilities){

@@ -43,7 +43,7 @@ const DropDownDrawers = (pokeData) => {
 						</button>
 					</div>
 					<div className='contentRow'>
-						<PokeStats pokeData={pokeData} />
+						<PokeStats statData={pokeData} />
 					</div>
 				</div>
 				<div
@@ -66,7 +66,7 @@ const DropDownDrawers = (pokeData) => {
 						</button>
 					</div>
 					<div className='contentRow'>
-						<Evolution pokeData={pokeData} />
+						<Evolution evolutionData={pokeData} />
 					</div>
 				</div>
 				<div
@@ -88,7 +88,7 @@ const DropDownDrawers = (pokeData) => {
 							)}
 						</button>
 					</div>
-					<GameAppearance  pokeData={pokeData} />
+					<GameAppearance  gameData={pokeData} />
 				</div>
 				<div
 					className='drawerFour'
@@ -111,10 +111,10 @@ const DropDownDrawers = (pokeData) => {
 							)}
 						</button>
 					</div>
-					<Abilities pokeData={pokeData} />
+					<Abilities abilityData={pokeData} />
 				</div>
 				<div className='flavorTextContainer'>
-					<PokeText pokeData={pokeData} />
+					<PokeText textData={pokeData} />
 				</div>
 			</div>
 		</>

@@ -87,9 +87,10 @@ const gameMap = [
 	},
 ];
 
-const GameAppearance = (pokeData) => {
-	const gameIndices = pokeData.basePokeData?.game_indices[0]?.version.name;
-	const pokeGeneration = pokeData.pokeData?.generation.name;
+const GameAppearance = (gameData) => {
+	const data = gameData.gameData;
+	const gameIndices = data.pokemonData.game_indices[0]?.version.name;
+	const pokeGeneration = data.speciesData.generation.name;
 	const gameVersion = gameMap.find(
 		(item) =>
 			item.generation === gameIndices || item.generation === pokeGeneration

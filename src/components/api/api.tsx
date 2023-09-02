@@ -52,8 +52,8 @@ const FetchPokeData = ({ userSelection }: Search) => {
 				</div>
 			) : (
 				<div className='topComponents'>
-					<PokeImage pokeData={pokemonData} />
-					<DropDownDrawers pokeData={speciesData} basePokeData={pokemonData} />
+					<PokeImage pokeImgData={pokemonData} />
+					<DropDownDrawers speciesData={speciesData} pokemonData={pokemonData} />
 				</div>
 			)}
 		</div>

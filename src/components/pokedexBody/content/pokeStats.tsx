@@ -49,11 +49,11 @@ export const getThemeTextTypes = (pokeType: string) => {
 	return typeTextMap[pokeType] || "textBG";
 };
 
-const PokeStats = (pokeData) => {
-	const data = pokeData.basePokeData;
-	const rawType = data?.types[0].type.name;
+const PokeStats = (statData) => {
+	const data = statData.statData.pokemonData;
+	const rawType = data.types[0].type.name;
 	const pokeType = rawType.charAt(0).toUpperCase() + rawType.slice(1);
-	const decWeight = data?.weight;
+	const decWeight = data.weight;
 	const decHeight = data.height;
 	const pokeWeight = ((decWeight / 10) * 2.2).toFixed(1);
 	const totalHeight = (decHeight / 10) * 3.28;
