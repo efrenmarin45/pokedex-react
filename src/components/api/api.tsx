@@ -3,7 +3,7 @@ import { MainClient } from "pokenode-ts";
 import pokeGif from "../../assets/ash_pikachu.gif";
 import { PokeImage } from "../pokedexBody/content/pokeImage";
 import DropDownDrawers from "../pokedexBody/dropDown";
-import pokeError from "../../assets/togepiError.png"
+import pokeError from "../../assets/togepiError.png";
 import { Pokemon, Search, PokemonSpecies } from "../interface";
 
 const FetchPokeData = ({ userSelection }: Search) => {
@@ -53,7 +53,10 @@ const FetchPokeData = ({ userSelection }: Search) => {
 			) : (
 				<div className='topComponents'>
 					<PokeImage pokeImgData={pokemonData} />
-					<DropDownDrawers speciesData={speciesData} pokemonData={pokemonData} />
+					<DropDownDrawers
+						speciesData={speciesData}
+						pokemonData={pokemonData}
+					/>
 				</div>
 			)}
 		</div>

@@ -13,8 +13,7 @@ const CloseBtn = (props: {
 		<>
 			{isActive ? (
 				<button className='closeBtn' onClick={CloseDex}>
-					<CancelPresentationIcon 
-					sx={{ color: "#ffffff" }} fontSize='medium' />{" "}
+					<CancelPresentationIcon sx={{ color: "#ffffff" }} fontSize='medium' />{" "}
 				</button>
 			) : (
 				<button className='hideInSight'>

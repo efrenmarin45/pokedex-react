@@ -104,7 +104,8 @@ const GameAppearance = (gameData) => {
 					Pokemon {gameVersion?.title}
 				</p>
 				<Tilt>
-					<img className="gameImage"
+					<img
+						className='gameImage'
 						src={gameVersion?.image}
 						style={{ height: "10vh", objectFit: "contain" }}
 					/>

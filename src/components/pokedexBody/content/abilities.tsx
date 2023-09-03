@@ -3,14 +3,14 @@ const Abilities = (abilityData) => {
 	const rawAbilities = data.abilities;
 	const abilitiesList: string[] = [];
 
-	for (let items of rawAbilities){
+	for (let items of rawAbilities) {
 		abilitiesList.push(items.ability.name);
 	}
 	return (
 		<div className='abilityContainer'>
 			<div className='abilityStack'>
 				{abilitiesList.map((ability, index) => (
-				<p key={index}>{ability}</p>
+					<p key={index}>{ability}</p>
 				))}
 			</div>
 		</div>

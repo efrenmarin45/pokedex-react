@@ -7,7 +7,9 @@ const PokeText = (textData) => {
 	const rawType = baseData.types[0].type.name;
 	const pokeType = rawType?.charAt(0).toUpperCase() + rawType?.slice(1);
 	const typeThemeContainer = getThemeContainerFlavorTypes(pokeType);
-	const enText = flavorText.filter((item: { language: { name: string; }; }) => item.language.name === "en");
+	const enText = flavorText.filter(
+		(item: { language: { name: string } }) => item.language.name === "en"
+	);
 	const enFlavorText = enText[0].flavor_text;
 
 	return (

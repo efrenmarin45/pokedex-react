@@ -15,8 +15,7 @@ const defaultOptions = {
 export const PokeImage = (pokeImgData) => {
 	const imgData = pokeImgData.pokeImgData;
 	const pokeDreamImage = imgData.sprites.other.dream_world.front_default;
-	const pokeAltImage =
-		imgData.sprites.other["official-artwork"].front_default;
+	const pokeAltImage = imgData.sprites.other["official-artwork"].front_default;
 	const mainPokeImage = pokeDreamImage != null ? pokeDreamImage : pokeAltImage;
 
 	return (
