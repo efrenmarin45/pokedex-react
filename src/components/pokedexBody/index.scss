@@ -941,6 +941,10 @@
 		display: none;
 	}
 
+	.gameStack > p{
+		font-size: 2.5vw;
+	}
+
 	.speciesTextContainer > p {
 		font-size: 0.7em;
 	}
@@ -1042,5 +1046,29 @@
 		height: 25px;
 		font-size: 0.5em;
 		margin-left: 15px;
+	}
+
+	.statsContainer {
+		height: 15vh;
+	}
+
+	.textBG {
+		height: 3vh;
+	}
+
+	.evolutionContainer {
+		height: 16vh;
+	}
+
+	.noEvolution > p{
+		font-size: 1.5vh;
+	}
+
+	.gameAppearanceContainer {
+		height: 16vh;
+	}
+
+	.abilityContainer {
+		height: 12vh;
 	}
 }
