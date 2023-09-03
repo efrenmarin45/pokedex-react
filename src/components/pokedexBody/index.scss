@@ -166,21 +166,6 @@
 	font-weight: bold;
 }
 
-@keyframes spinning {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-.spin {
-	animation-name: spinning;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
 //* Main Pokemon Image *//
 .imgContainer {
 	justify-content: center;
@@ -424,7 +409,8 @@
 }
 
 .gameStack > img {
-	height: 13vh;
+	height: 23%;
+	object-fit: contain;
 	margin: 0;
 }
 
@@ -849,6 +835,74 @@
 	.errorHandlingText {
 		font-size: 1em;
 	}
+
+	.topComponents {
+		display: flex;
+		width: 85vw;
+		justify-content: space-around;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.imgContainer {
+		height: 35vw;
+	}
+
+	.ddContainer {
+		width: 70vw;
+		height: 35.2vh;
+	}
+
+	.drawerOne,
+	.drawerTwo,
+	.drawerThree,
+	.drawerFour {
+		height: 300vh;
+		width: 100%;
+	}
+
+	.dd-topRow {
+		width: 100%;
+	}
+
+	.statsTitle {
+		font-size: 1.8vw;
+	}
+
+	.evolutionStack {
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+
+	.evolutionStack > p{
+		font-size: 1.5vw;
+	}
+
+	.evolutionStack > img {
+		height: 9vh;
+	}
+
+	.gameStack {
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+
+	.gameStack > p{
+		font-size: 1.5vw;
+	}
+
+	.gameStack > img {
+		height: 50vh;
+	}
+
+	.contentRow {
+		height: 3vh;
+		justify-content: center;
+	}
+
+	.speciesTextContainer > p {
+		font-size: 0.9em;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -938,8 +992,8 @@
 	}
 
 	.searchBar {
-		width: 200px;
-		height: 40px;
+		width: 185px;
+		height: 35px;
 	}
 
 	.searchBar > input {

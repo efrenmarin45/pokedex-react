@@ -88,7 +88,9 @@ const DropDownDrawers = (pokeData) => {
 							)}
 						</button>
 					</div>
-					<GameAppearance  gameData={pokeData} />
+					<div className='contentRow'>
+						<GameAppearance gameData={pokeData} />
+					</div>
 				</div>
 				<div
 					className='drawerFour'
@@ -111,7 +113,9 @@ const DropDownDrawers = (pokeData) => {
 							)}
 						</button>
 					</div>
-					<Abilities abilityData={pokeData} />
+					<div className='contentRow'>
+						<Abilities abilityData={pokeData} />
+					</div>
 				</div>
 				<div className='flavorTextContainer'>
 					<PokeText textData={pokeData} />

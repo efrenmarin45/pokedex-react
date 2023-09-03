@@ -103,12 +103,12 @@ const GameAppearance = (gameData) => {
 					First appeared on <br />
 					Pokemon {gameVersion?.title}
 				</p>
-				<Tilt>
+				{/* <Tilt> */}
 					<img
 						src={gameVersion?.image}
-						style={{ height: "13vh", objectFit: "contain" }}
+					
 					/>
-				</Tilt>
+				{/* </Tilt> */}
 			</div>
 		</div>
 	);
