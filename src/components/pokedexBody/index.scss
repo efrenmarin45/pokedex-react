@@ -883,8 +883,7 @@
 	}
 
 	.gameStack {
-		flex-direction: column-reverse;
-		justify-content: center;
+		flex-direction: row;
 	}
 
 	.gameStack > p{
@@ -901,7 +900,49 @@
 	}
 
 	.speciesTextContainer > p {
-		font-size: 0.9em;
+		font-size: 0.8em;
+	}
+
+	.abilityContainer {
+		height: 14vh;
+		margin: 1.5vh 10px;
+	}
+
+	.abilityStack {
+		height: 14vh;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.abilityStack > p {
+		width: 100%;
+		margin-bottom: 3px;
+		font-size: 1vh;
+		padding: .5vh;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.topComponents{
+		flex-direction: column;
+	}
+
+	.imgContainer {
+		width: 100%;
+		height: 17vh;
+	}
+
+	.gameStack {
+		justify-content: center;
+	}
+
+	.gameImage {
+		display: none;
+	}
+
+	.speciesTextContainer > p {
+		font-size: 0.7em;
 	}
 }
 
@@ -992,8 +1033,8 @@
 	}
 
 	.searchBar {
-		width: 185px;
-		height: 35px;
+		width: 200px;
+		height: 40px;
 	}
 
 	.searchBar > input {
