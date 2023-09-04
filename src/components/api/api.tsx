@@ -54,18 +54,18 @@ const FetchPokeData = ({ userSelection }: Search) => {
 				</div>
 			) : (
 				<>
-				<MediaQuery query="(min-width: 841px)">
-				<div className='topComponents'>
-					<PokeImage pokeImgData={pokemonData} />
-					<DropDownDrawers
-						speciesData={speciesData}
-						pokemonData={pokemonData}
-					/>
-				</div>
-				</MediaQuery>
-				<MediaQuery query="(max-width: 840px)">
-					<NoneShown />
-				</MediaQuery>
+					<MediaQuery query='(min-width: 841px)'>
+						<div className='topComponents'>
+							<PokeImage pokeImgData={pokemonData} />
+							<DropDownDrawers
+								speciesData={speciesData}
+								pokemonData={pokemonData}
+							/>
+						</div>
+					</MediaQuery>
+					<MediaQuery query='(max-width: 840px)'>
+						<NoneShown />
+					</MediaQuery>
 				</>
 			)}
 		</div>
