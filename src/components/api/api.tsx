@@ -3,8 +3,10 @@ import { MainClient } from "pokenode-ts";
 import pokeGif from "../../assets/ash_pikachu.gif";
 import { PokeImage } from "../pokedexBody/content/pokeImage";
 import DropDownDrawers from "../pokedexBody/dropDown";
+import NoneShown from "../pokedexBody/content/noneShown";
 import pokeError from "../../assets/togepiError.png";
 import { Pokemon, Search, PokemonSpecies } from "../interface";
+import MediaQuery from "react-responsive";
 
 const FetchPokeData = ({ userSelection }: Search) => {
 	const [pokemonData, setPokemonData] = useState<Pokemon | null>(null);
@@ -51,6 +53,8 @@ const FetchPokeData = ({ userSelection }: Search) => {
 					/>
 				</div>
 			) : (
+				<>
+				<MediaQuery query="(min-width: 841px)">
 				<div className='topComponents'>
 					<PokeImage pokeImgData={pokemonData} />
 					<DropDownDrawers
@@ -58,6 +62,11 @@ const FetchPokeData = ({ userSelection }: Search) => {
 						pokemonData={pokemonData}
 					/>
 				</div>
+				</MediaQuery>
+				<MediaQuery query="(max-width: 840px)">
+					<NoneShown />
+				</MediaQuery>
+				</>
 			)}
 		</div>
 	);
